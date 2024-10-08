@@ -26,10 +26,6 @@ jobs:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
-      - save_cache:
           key: 'android-orb-v1-{{ epoch }}'
           paths:
             - ~/.android/build-cache

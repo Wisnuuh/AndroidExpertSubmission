@@ -23,6 +23,9 @@ jobs:
           name: Create local.properties
           command: touch local.properties
       - run:
+          name: Echo local.properties
+          command: echo "sdk.dir=$ANDROID_HOME" > local.properties
+      - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:

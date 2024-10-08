@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AndroidExpertSubmission</string>
+    <string name="nav_header_title">Games</string>
+    <string name="nav_header_subtitle">games@games.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Favorite</string>
+    <string name="image_description">Description</string>
+    <string name="text_primary">Text Primary</string>
+    <string name="text_subtitle">Text subtitle</string>
+    <string name="menu_favorite">Favorite button</string>
+
+    <string name="no_data">Empty data</string>
+    <string name="something_wrong">Oops.. something went wrong</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

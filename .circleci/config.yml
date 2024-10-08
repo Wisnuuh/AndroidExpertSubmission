@@ -5,6 +5,8 @@ orbs:
   android: circleci/android@0.2.1
 jobs:
   test-java:
+    docker:
+      - image: cimg/openjdk:17.0
     executor: android/android
     steps:
       - checkout

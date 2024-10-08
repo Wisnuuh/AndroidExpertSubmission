@@ -18,6 +18,9 @@ jobs:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
       - run:
+          name: Create local.properties
+          command: touch local.properties
+      - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
@@ -39,6 +42,9 @@ jobs:
       - store_artifacts:  
           path: app/build/outputs/apk/debug/
           destination: artifact-file
+      - run:
+          name: Delete local.properties
+          command: rm local.properties
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:

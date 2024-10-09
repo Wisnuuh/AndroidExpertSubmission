@@ -10,6 +10,8 @@ jobs:
       - image: cimg/openjdk:17.0
     environment:
       JVM_OPTS: -Xmx3200m
+      ENV ANDROID_HOME "/home/circleci/android-sdk"
+      ENV ANDROID_SDK_ROOT $ANDROID_HOME
     executor: android/android
     steps:
       - checkout

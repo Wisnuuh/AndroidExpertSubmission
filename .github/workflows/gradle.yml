@@ -39,6 +39,23 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
+    # Run tests
+    - name: Run Tests
+      run: ./gradlew lint test
+
+    # Store build artifacts (APKs)
+    - name: Upload APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-debug-apk
+        path: app/build/outputs/apk/debug/
+    
+    # Store test reports
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: app/build/test-results/
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
